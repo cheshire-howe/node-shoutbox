@@ -1,0 +1,12 @@
+if locals.user
+  #menu
+    span(class="name")= user.name
+    a(href="/") home
+    a(href="/post") post
+    a(href="/logout") logout
+
+else
+  #menu
+    a(href="/") home
+    a(href="/login") login
+    a(href="/register") register

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  h1= title
+  p Fill in the form below to add a new post.
+
+  include messages
+
+  form(action="/post", method="post")
+    p: input(type="text", name="entry[title]", placeholder="Title", autofocus)
+    p: textarea(name="entry[body]", placeholder="Body",
+      cols="31" rows="15" )
+    p: input(type="submit", value="Post")
